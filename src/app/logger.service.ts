@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { NGXLogger } from 'ngx-logger';
-import { buildDate, commitHash, version } from '../environments/version';
 
 @Injectable({
   providedIn: 'root',
@@ -34,9 +33,5 @@ export class LoggerService {
 
   log(message: string): void {
     this.logger.log(message);
-  }
-
-  getVersion(): string {
-    return `Version ${version}, commit ${commitHash}, built at ${buildDate}`;
   }
 }

@@ -1,5 +1,6 @@
-import { Component, VERSION } from '@angular/core';
+import { Component } from '@angular/core';
 import { LoggerService } from './logger.service';
+import { version } from '../environments/version';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,11 @@ import { LoggerService } from './logger.service';
 })
 export class AppComponent {
   title = 'logger-example';
-  version = VERSION.full;
+  appVersion = version;
 
   constructor(private loggerService: LoggerService) {
+    console.log('Current Version:', this.appVersion);
+
     this.loggerService.logInfo('Hello, logger-example');
 
     this.loggerService.logDebug('Debug message');

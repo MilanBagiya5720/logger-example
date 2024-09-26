@@ -23,12 +23,6 @@
             "polyfills": [
               "zone.js"
             ],
-            "fileReplacements": [
-              {
-                "replace": "src/environments/version.ts",
-                "with": "src/environments/version.prod.ts"
-              }
-            ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
